@@ -30,6 +30,7 @@ $(document).ready(function () {
         firstTrain = moment($("#first-train-input").val().trim(), "HH:mm").format("HH:mm");
         frequency = parseInt($("#frequency").val().trim());
         
+// Calculate first train arrival time and second train position
         console.log(firstTrain);
         console.log(typeof firstTrain);
         var firstTrainConverted = moment(firstTrain, "hh:mm");
@@ -40,6 +41,7 @@ $(document).ready(function () {
         console.log(tRemainder);
         var minuteAway = frequency - tRemainder;
         console.log(minuteAway);
+
 // create temporary objecy to hold train data
         var newTrain = {
             name: trainName,
@@ -48,7 +50,7 @@ $(document).ready(function () {
             minuteAway: minuteAway,
             nexTrain: nextTrain,
             firstTrain: firstTrain,
-            
+      
     };
    
 // upload train data to the database
@@ -71,7 +73,6 @@ $(document).ready(function () {
     database.ref().on("child_added" , function(ChildSnapshot){
 
         // console.log(ChildSnapshot.val());
-
 
         var trainName = ChildSnapshot.val().name;
         var destination = ChildSnapshot.val().destination;
