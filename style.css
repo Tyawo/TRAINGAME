@@ -1,5 +1,62 @@
 
-main{
+body{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    box-sizing: border-box;
     max-width: 1000px;
     margin: auto;
 }
+
+.jumbotron.jumbotron-fluid{
+    background-color: black
+}
+
+.lead{
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    font-style: italic;
+}
+h1{
+    color: white;
+    text-align: center;
+}
+.panel-heading{
+    background-color: cornflowerblue;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+.row{
+    border: 2px;
+box-shadow: 1px rgb(231, 184, 184);    
+}
+
+section,
+.results{
+    background-color:rgb(240, 243, 245);
+    box-shadow: 1px black;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+.form-group{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+@media screen and (min-width: 768px) {
+    body {
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+  }
+@media screen and (min-width: 768px) {
+    body {
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+  }
