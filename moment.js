@@ -47,8 +47,6 @@ $(document).ready(function () {
         console.log(newTrain.frequency);
         console.log(newTrain.time);
 
-        alert("Train successfully added");
-
         // clears all of the text-boxes
         $("#train-name").val("");
         $("#arrival").val("");
@@ -58,7 +56,7 @@ $(document).ready(function () {
     });
     // retrieve data from the database 
     database.ref().on("child_added", function (ChildSnapshot) {
-        console.log("======================",ChildSnapshot.val());
+        console.log("======================", ChildSnapshot.val());
 
         var trainName = ChildSnapshot.val().name;
         var destination = ChildSnapshot.val().destination;
@@ -74,7 +72,7 @@ $(document).ready(function () {
         console.log(minuteAway);
         console.log(currentTime);
 
-
+        // convert first train arrival time
         var trainArrivalConverted = moment(firstTrainTime, "hh:mm").subtract(1, "years");
         console.log(trainArrivalConverted);
 
