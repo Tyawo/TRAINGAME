@@ -20,10 +20,12 @@ Upon submission, the new train information is stored in the application and also
 
 # TECHNOLOGY AND PACKAGES USED
 
+Different applications and languages were used in this project:
+
 * Firebase to host arrival and departure data
 
 * Moment.js to format the time.
 
 * HTML and CSS to design and style the website
 
-* Javascript to collect, manipulate the data and save train information in the firebase.
+* Javascript to collect, manipulate and save the data and the trains information in the firebase.

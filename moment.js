@@ -2,12 +2,12 @@ $(document).ready(function () {
 
     // Initialize Firebase
     var firebaseConfig = {
-        apiKey: "AIzaSyBHuiRU-wbX-NRpzF9wfXWjki2hhYJea_w",
-        authDomain: "in-class-activity-34cd2.firebaseapp.com",
-        databaseURL: "https://in-class-activity-34cd2.firebaseio.com",
-        projectId: "in-class-activity-34cd2",
-        storageBucket: "in-class-activity-34cd2.appspot.com",
-        messagingSenderId: "371617324017"
+        apiKey: "AIzaSyBDK81GcqkTPH2GO1e9mORR9Y6luKhjdXg",
+        authDomain: "database1-6e7f8.firebaseapp.com",
+        databaseURL: "https://database1-6e7f8.firebaseio.com",
+        projectId: "database1-6e7f8",
+        storageBucket: "database1-6e7f8.appspot.com",
+        messagingSenderId: "397023224579"
     };
     firebase.initializeApp(firebaseConfig);
 
@@ -58,7 +58,7 @@ $(document).ready(function () {
     });
     // retrieve data from the database 
     database.ref().on("child_added", function (ChildSnapshot) {
-        console.log(ChildSnapshot.val());
+        console.log("======================",ChildSnapshot.val());
 
         var trainName = ChildSnapshot.val().name;
         var destination = ChildSnapshot.val().destination;
@@ -108,7 +108,7 @@ $(document).ready(function () {
 
         );
         // Append the new row to the table
-        $("#new-train-schedule").append(newRow);
+        $("#train-schedule").append(newRow);
 
     });
 
