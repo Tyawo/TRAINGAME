@@ -6,10 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+
+  <!-- bootstarp reference -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
-  <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+
+  <!-- firebase reference -->
+  <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+  
+  <!-- jQuey -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.js"></script>
+  <!-- moment.js reference -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
 </head>
 
@@ -32,17 +41,24 @@
               <h5 class="title"><strong>Current Train Schedule | Current Time <span id="current-time"></span></strong>
               </h5>
             </div>
-            <table class="table table-striped" id='train schedule'>
+            <table class="table table-striped" id="train-schedule">
               <thead>
                 <tr>
                   <th>Train Name</th>
-                  <th>destination</th>
+                  <th>Destination</th>
                   <th>Frequency (min)</th>
                   <th>Next Arrival</th>
                   <th>Minutes Away</th>
                 </tr>
               </thead>
               <tbody>
+                <tr>
+                  <td id="train-name-display">Express</td>
+                  <td id="destination-display"> Miami</td>
+                  <td id="frequency-display"> 100</td>
+                  <td id="arrival-display"> 07:40 AM</td>
+                  <td id="time-left-display"> 20 </td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -69,27 +85,29 @@
 
           <div class="form-group">
             <label for="destination">Destination</label>
-            <input type="text" class="form-control" id="destination">
+            <input type="place" class="form-control" id="train-destination" placeholder="City, State"/>
           </div>
 
          
           <div class="form-group">
-           <label for="first-train">First Train Time (HH:mm - Military Time)</label>
-           <input type="text" class="form-control" id="first-train">
+           <label for="time">First Train Time (HH:mm - Military Time)</label>
+           <input type="time" class="form-control" id="arrival" placeholder="HH:mm"/>
          </div>
 
          <div class="form-group">
-          <label for="frequency">Frequency (Min)</label>
-          <input type="text" class="form-control" id="frequency">
+          <label for="frequency">Frequency (min)</label>
+          <input type="frequency" class="form-control" id="frequency" placeholder="Frequency"/>
          </div>
 
-        <button type="submit" class="btn btn-primary" id="submit-btn">Submit</button>
+        <button type="button" class="btn btn-primary" id="submit-btn">Submit</button>
       </form>
      </div>
       </section>
     </div>
     </div>
     
+<!-- javascript -->
+<script src="moment.js"></script>
 
 </body>
 

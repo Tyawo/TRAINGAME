@@ -25,6 +25,7 @@ h1{
     background-color: cornflowerblue;
     padding-top: 5px;
     padding-bottom: 5px;
+    padding-left: 10px;
 }
 
 
@@ -41,6 +42,11 @@ section,
     margin-right: 10px;
 
 }
+tbody,
+thead{
+    text-align: center;
+}
+
 
 .form-group{
     padding-left: 15px;
