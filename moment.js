@@ -29,8 +29,8 @@ $(document).ready(function () {
         var firstTrainTime = $("#arrival").val().trim();
         var frequency = $("#frequency").val().trim();
 
-        if($("#train-name").val ==="null")
-        alert("Entry required")
+        // if(($("#train-name").val) ==="null")
+        // alert("Entry required")
 
         // create temporary object to hold train data
         var newTrain = {
@@ -84,7 +84,7 @@ $(document).ready(function () {
 
         // diff in time
         var diffTime = moment().diff(moment(trainArrivalConverted), "minutes")
-        console.log("Minute Away: " + diffTime);
+        console.log("Time Left: " + diffTime);
 
         // time between
         var tRemainder = diffTime % frequency;
@@ -109,9 +109,6 @@ $(document).ready(function () {
         );
         // Append the new row to the table
         $("#new-train-schedule").append(newRow);
-
-
-
 
     });
 
